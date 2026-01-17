@@ -1,32 +1,21 @@
 # Auditing Student Risk Models
 
-This project audits an early-warning machine learning model used to identify at-risk students.
+This project analyzes an early-warning machine learning model used to identify at-risk students, with a focus on **who the model misses rather than how accurate it is**.
 
-Instead of focusing only on accuracy, the project analyzes:
-- False negative errors (students who were missed)
-- Fairness across gender, internet access, and parental education
-- Ethical blind spots in high-performing models
-
-## Files
-- `student_risk_audit.ipynb` – main analysis notebook
-- `report.html` – exploratory data analysis (pandas profiling)
-- The EDA report (`report.html`) can be downloaded and viewed locally in a browser.
+## What This Project Does
+- Trains a student risk classification model (~93% accuracy, ~91% recall)
+- Stops model tuning and performs **error analysis**
+- Analyzes **false negatives** (students who needed help but were not flagged)
+- Compares model behavior across gender, internet access, and parental education
+- Runs **what-if simulations** (study time, absences) to see what changes reduce risk
 
 ## Key Insight
-Even highly accurate models can systematically miss vulnerable student groups, which is not visible from aggregate metrics alone.
+High overall accuracy can hide important blind spots.  
+Some student groups are more likely to be missed, which is not visible from aggregate metrics alone.
 
-### About
+## Files
+- `who_gets_missed.ipynb` – main analysis notebook  
+- `report.html` – exploratory data analysis (open locally in a browser)
 
--I built an early-warning student risk model using tabular behavioral data and achieved around 93% accuracy and 91% recall.
-
--Instead of optimizing further, I froze the model and focused on error analysis.
-
--I analyzed false negatives and computed group-wise false negative rates across sensitive attributes like gender, internet access, and parental education.
-
--Despite strong aggregate performance, the model systematically under-identified at-risk students from certain groups, particularly those without internet access.
-
--I then ran counterfactual what-if simulations on false negatives by modifying only intervenable features like study time and absences, to quantify which actions actually reduce predicted risk.
-
--The project is essentially an audit of model blind spots rather than a grade prediction task.
-
-
+## Conclusion
+This project focuses on understanding **model failures and fairness**, not just predicting grades.
