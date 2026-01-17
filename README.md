@@ -16,6 +16,7 @@ Instead of focusing only on accuracy, the project analyzes:
 Even highly accurate models can systematically miss vulnerable student groups, which is not visible from aggregate metrics alone.
 
 ### About
+
 -I built an early-warning student risk model using tabular behavioral data and achieved around 93% accuracy and 91% recall.
 
 -Instead of optimizing further, I froze the model and focused on error analysis.
@@ -27,4 +28,5 @@ Even highly accurate models can systematically miss vulnerable student groups, w
 -I then ran counterfactual what-if simulations on false negatives by modifying only intervenable features like study time and absences, to quantify which actions actually reduce predicted risk.
 
 -The project is essentially an audit of model blind spots rather than a grade prediction task.
+
 
