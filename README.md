@@ -10,6 +10,8 @@ Instead of focusing only on accuracy, the project analyzes:
 ## Files
 - `student_risk_audit.ipynb` – main analysis notebook
 - `report.html` – exploratory data analysis (pandas profiling)
+- The EDA report (`report.html`) can be downloaded and viewed locally in a browser.
 
 ## Key Insight
 Even highly accurate models can systematically miss vulnerable student groups, which is not visible from aggregate metrics alone.
+
